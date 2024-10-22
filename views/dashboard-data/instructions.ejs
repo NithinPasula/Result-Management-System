@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructions - Result Management System</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Instructions for Using the Result Management System</h1>
+
+      <div class="instructions-section">
+        <h2>General Instructions</h2>
+        <p>
+          Welcome to the University Result Management System. Follow these
+          instructions to navigate the platform efficiently.
+        </p>
+      </div>
+
+      <% if (user.role === 'teacher') { %>
+      <div class="instructions-section">
+        <h2>Teacher's Instructions</h2>
+        <ul>
+          <li>
+            Access the "Dashboard" to view all the modules you are teaching.
+          </li>
+          <li>
+            Use the "Modules" section to upload, edit, or delete student results
+            for respective subjects.
+          </li>
+          <li>Make sure to validate all results before submitting.</li>
+        </ul>
+      </div>
+      <% } else if (user.role === 'student') { %>
+      <div class="instructions-section">
+        <h2>Student's Instructions</h2>
+        <ul>
+          <li>
+            Navigate to the "Results" section to view your academic performance.
+          </li>
+          <li>
+            You can download your detailed mark sheets from the "Student
+            Marksheet" page.
+          </li>
+          <li>
+            If you encounter any discrepancies, contact your course coordinator.
+          </li>
+        </ul>
+      </div>
+      <% } %>
+
+      <div class="instructions-section">
+        <h2>Technical Support</h2>
+        <p>
+          If you experience any technical difficulties, please contact support
+          at <a href="mailto:support@university.com">support@university.com</a>.
+        </p>
+      </div>
+
+      <div class="back-button">
+        <a href="/">Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>
